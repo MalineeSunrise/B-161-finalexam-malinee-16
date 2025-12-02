@@ -7,13 +7,11 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
@@ -24,4 +22,21 @@ public class Player : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
         }
     }
+
+    public void SetMoveSpeed(float value)
+    {
+        
+    }
+
+    public void SetInerable(bool inerable)
+    {
+        
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+    }
+
+
 }
