@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        
+
     }
 
 
