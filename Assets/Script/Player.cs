@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private float moveSpeed = 5f;
+    [field : SerializeField]private float moveSpeed = 5f;
+    [field : SerializeField]private bool isInvulnerable = false;
     private float jumpForce = 10f;
 
     private Rigidbody2D rb;
@@ -23,9 +25,10 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void SetMoveSpeed(float value)
+    public void SetMoveSpeed(float newSpeed)
     {
-        
+        moveSpeed *= newSpeed;
+        newSpeed =2f;
     }
 
     public void SetInerable(bool inerable)
